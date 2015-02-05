@@ -1,0 +1,150 @@
+<div class="col-md-10 col-md-offset-1 card-content view-project-card">
+
+
+<section data-ng-controller="ProjectsController" data-ng-init="findOne()">
+
+
+
+	<div class="row project-view-title">
+
+		<div class="col-xs-2 profile-circle-view">
+			<img src="modules/projects/img/profileCircle.png" class="img-responsive" />
+		</div>
+
+		<div class="col-xs-10">
+			<div class="row">
+				<h1 data-ng-bind="project.name"></h1>
+			</div>
+
+			<div class="row ">
+				<h2 data-ng-bind="project.desc"></h2>
+			</div>
+
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-xs-10 col-xs-offset-2">
+			<h3># insights</h3>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-xs-10 col-xs-offset-2">
+			<h3># participants</h3>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-xs-10 col-xs-offset-2">
+			<h3># tasks</h3>
+		</div>
+	</div>
+
+
+
+	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == project.user._id))">
+		<a class="btn btn-primary" href="/#!/projects/{{project._id}}/edit">
+			<i class="glyphicon glyphicon-edit"></i>
+		</a>
+		<a class="btn btn-primary" data-ng-click="remove();">
+			<i class="glyphicon glyphicon-trash"></i>
+		</a>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+
+<section data-ng-controller="TasksController" data-ng-init="find()">
+
+	<a  data-ng-href="#!/tasks/{{task._id}}" data-ng-repeat="task in tasks | filter:{ project: $root.passedProjectId }" >
+
+
+		<div class="row task-preview-project" >
+
+
+
+
+
+					<div class="col-xs-10">
+						<h1 data-ng-bind="task.name"></h1>
+					</div>
+
+					<div class="col-xs-2">
+						img
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+	</a>
+
+</section>
+
+
+
+
+
+
+<section data-ng-controller="TasksController">
+	<div class="page-header">
+		<h1>Add task to project</h1>
+		<h4 class="list-group-item-heading" data-ng-bind="project._id"></h4>
+	</div>
+	<div class="col-md-12">
+		<form class="form-horizontal" data-ng-submit="create()" novalidate>
+			<fieldset>
+				<div class="form-group">
+					<label class="control-label" for="name">Task name</label>
+					<div class="controls">
+						<input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Name" required>
+					</div>
+
+					<label class="control-label" for="purpose">Task purpose</label>
+					<div class="controls">
+						<input type="text" data-ng-model="purpose" id="purpose" class="form-control" placeholder="Purpose" required>
+					</div>
+
+					<label class="control-label" for="type">Task type</label>
+					<div class="controls">
+						<input type="text" data-ng-model="type" id="type" class="form-control" placeholder="Type" required>
+					</div>
+
+
+				</div>
+				<div class="form-group">
+					<input type="submit" class="btn btn-default">
+				</div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+
+</div>
