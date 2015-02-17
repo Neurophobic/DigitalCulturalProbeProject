@@ -1,14 +1,14 @@
 'use strict';
 
 /**
- * Module dependencies.
- */
+* Module dependencies.
+*/
 var mongoose = require('mongoose'),
-	Schema = mongoose.Schema;
+Schema = mongoose.Schema;
 
 /**
- * Task Schema
- */
+* Task Schema
+*/
 var TaskSchema = new Schema({
 	name: {
 		type: String,
@@ -24,7 +24,7 @@ var TaskSchema = new Schema({
 	},
 	type: {
 		type: String,
-		default: '',
+		default: 'text',
 		required: 'Please fill Task type',
 		trim: true
 	},
@@ -39,7 +39,12 @@ var TaskSchema = new Schema({
 	project: {
 		type: Schema.ObjectId,
 		ref: 'Project'
-	}
+	},
+	insights : [{
+		type: Schema.Types.ObjectId,
+		ref: 'Insight'
+	}]
+
 });
 
 mongoose.model('Task', TaskSchema);

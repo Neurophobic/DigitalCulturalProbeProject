@@ -1,0 +1,81 @@
+<ldiv class="row">
+
+  <h1 class="task-head"> Tasks </h1>
+
+</div>
+
+<a  data-ng-href="#!/tasks/{{task._id}}" data-ng-repeat="task in tasksCtrl.tasks | filter:{ project: $root.passedProjectId }" >
+
+
+
+
+
+  <div class="col-md-5 card-content task-prev">
+
+    <div class="row top-task-prev {{task.type}}-top-color" >
+      <div class="col-md-10">
+        <h1 data-ng-bind="task.name"></h1>
+      </div>
+
+      <div ng-if="task.type == 'image'"class="col-xs-2">
+
+        <i class="glyphicon glyphicon-camera small-type-icon"></i>
+
+      </div>
+
+      <div ng-if="task.type == 'sound'"class="col-xs-2">
+
+        <i class="glyphicon glyphicon-headphones small-type-icon"></i>
+
+      </div>
+
+      <div ng-if="task.type == 'text'"class="col-xs-2">
+
+        <i class="glyphicon glyphicon-pencil small-type-icon"></i>
+
+      </div>
+
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <p>{{task.purpose}} </p>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+</a>
+
+
+<!--
+<div ng-if="task.type == 'image'"class="col-xs-2">
+<div class="{{task.type}}-type-circle">
+<i class="glyphicon glyphicon-camera small-type-icon"></i>
+</div>
+</div>
+
+<div ng-if="task.type == 'sound'"class="col-xs-2">
+<div class="{{task.type}}-type-circle">
+<i class="glyphicon glyphicon-headphones small-type-icon"></i>
+</div>
+</div>
+
+<div ng-if="task.type == 'text'"class="col-xs-2">
+<div class="{{task.type}}-type-circle">
+<i class="glyphicon glyphicon-pencil small-type-icon"></i>
+</div>
+</div>
+-->

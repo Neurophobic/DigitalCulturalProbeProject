@@ -15,6 +15,7 @@ var fs = require('fs'),
 	cookieParser = require('cookie-parser'),
 	helmet = require('helmet'),
 	passport = require('passport'),
+	busboyBodyParser = require('busboy-body-parser'),
 	mongoStore = require('connect-mongo')({
 		session: session
 	}),
@@ -53,6 +54,8 @@ module.exports = function(db) {
 		},
 		level: 9
 	}));
+
+	app.use(busboyBodyParser());
 
 	// Showing stack errors
 	app.set('showStackError', true);

@@ -1,21 +1,93 @@
-<section data-ng-controller="TasksController" data-ng-init="findOne()">
-	<div class="page-header">
-		<h1 data-ng-bind="task.name"></h1>
+
+
+
+	<section data-ng-controller="TasksController" data-ng-init="findOne()">
+		<div class="row task-viewer-top">
+		<div class="col-md-12 ">
+			<h1 data-ng-bind="task.name"></h1>
+
+		</div>
 	</div>
-	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == task.user._id))">
-		<a class="btn btn-primary" href="/#!/tasks/{{task._id}}/edit">
-			<i class="glyphicon glyphicon-edit"></i>
-		</a>
-		<a class="btn btn-primary" data-ng-click="remove();">
-			<i class="glyphicon glyphicon-trash"></i>
-		</a>
+
+	<!--		<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == task.user._id))">
+	<a class="btn btn-primary" href="/#!/tasks/{{task._id}}/edit">
+	<i class="glyphicon glyphicon-edit"></i>
+</a>
+<a class="btn btn-primary" data-ng-click="remove();">
+<i class="glyphicon glyphicon-trash"></i>
+</a>
+</div>
+-->
+
+<!-- TEXT task start -->
+<div ng-if="task.type == 'text'">
+
+
+
+		<section  data-ng-controller="InsightsController" data-ng-init="find()" >
+
+
+
+			<div data-ng-repeat="insight in insights | filter:{ taskid: $root.passedTaskId }" class="task-viewer-insight col-md-10 col-md-offset-1 card-content">
+
+				<div class="row">
+					<p ng-if="insight.text.length > 200">
+						"{{insight.text}}"
+					</p>
+					<h4 ng-if="insight.text.length < 200">
+						"{{insight.text}}"
+					</h4>
+				</div>
+				<div class="row">
+
+					<h3>-{{insight.user.displayName}}</h3>
+					<h2 data-ng-bind="insight.created | date:'medium'"></h2>
+
+
+				</div>
+
+
+
+			</div>
+
+		</section>
+
 	</div>
-	<small>
-		<em class="text-muted">
-			Posted on
-			<span data-ng-bind="task.created | date:'mediumDate'"></span>
-			by
-			<span data-ng-bind="task.user.displayName"></span>
-		</em>
-	</small>
+
+<!-- TEXT task END -->
+
+
+<!-- IMAGE task start -->
+<div ng-if="task.type == 'image'">
+
+
+
+	<section  data-ng-controller="InsightsController" data-ng-init="find()" >
+
+
+
+		<div data-ng-repeat="insight in insights | filter:{ taskid: $root.passedTaskId }" class="task-viewer-insight col-md-10 col-md-offset-1 card-content">
+
+			<div class="row">
+				<img ng-src="http://localhost:3001/upload/{{insight._id}}" />
+			</div>
+			<div class="row">
+
+				<h3>-{{insight.user.displayName}}</h3>
+				<h2 data-ng-bind="insight.created | date:'medium'"></h2>
+
+
+			</div>
+
+
+
+		</div>
+
+	</section>
+
+</div>
+
+<!-- IMAGE task END -->
+
+
 </section>

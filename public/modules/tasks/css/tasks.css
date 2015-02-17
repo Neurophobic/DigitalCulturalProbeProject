@@ -1,0 +1,161 @@
+.modal-title{
+  font-size:50px;
+  font-family: 'Roboto', sans-serif;
+  font-weight:500;
+  color:#202020;
+  margin-top:10px;
+  margin-left:20px;
+  margin-bottom:5px;
+}
+
+.modal-body input[type="text"]{
+  height:65px;
+  font-size:35px;
+  background:white;
+  margin-bottom:50px;
+  border-bottom:5px dashed  #424242;
+  border-top:0px;
+  border-left:0px;
+  border-right:0px;
+
+  border-radius:0px;
+
+  -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+}
+
+
+
+.type-controls input[type="radio"]{
+
+margin-top:0px;
+  display:none;
+
+
+  /*background-image :    -moz-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :     -ms-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :      -o-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image : -webkit-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :         linear-gradient(rgb(240,240,240),rgb(224,224,224));*/
+
+}
+
+.type-controls input[type="radio"] + label {
+  margin-top:25px;
+  display:block;
+  width:130px;
+  height:130px;
+
+  border-radius:130px;
+
+
+  cursor:pointer;
+}
+.type-controls .radio{
+  margin-top:0px;
+}
+
+.type-controls input[type="radio"].red + label {
+
+
+  background-color:#F44336;
+
+}
+.type-controls input[type="radio"].green + label {
+
+
+  background-color:#4CAF50;
+
+}
+
+.type-controls input[type="radio"].blue + label {
+
+  background-color:#2196F3;
+}
+
+.type-controls input[type="radio"].yellow + label {
+
+
+  background-color:#FFEB3B;
+
+}
+
+.type-controls input[type="radio"]:checked + label {
+  outline:5px dashed #424242;
+}
+
+
+.create-type-icon{
+  text-align:center;
+  vertical-align:center;
+
+  margin-left:10%;
+  margin-top:20px;
+  font-size:90px;
+}
+
+/*
+  View a task
+*/
+
+.task-viewer-top {
+  margin-top:40px;
+  border:0px;
+  background-color: #f9f9f9;
+}
+
+.task-viewer-top h1{
+  font-size:55px;
+  font-family: 'Roboto', sans-serif;
+  color:#202020;
+  font-weight:500;
+  margin-top:15px;
+  margin-bottom:15px;
+  margin-left:10px;
+}
+
+.task-viewer-insight {
+  margin-top:40px;
+  border:0px;
+  background-color: #f9f9f9;
+}
+.task-viewer-insight p{
+  font-size:2em;
+  font-family: 'Roboto', sans-serif;
+  color:#202020;
+  font-weight:400;
+  margin-top:30px;
+  margin-bottom:20px;
+  margin-left:40px;
+  margin-right:40px;
+}
+
+.task-viewer-insight h4{
+  font-size:3em;
+  font-family: 'Roboto', sans-serif;
+  color:#202020;
+  font-weight:400;
+  margin-top:30px;
+  margin-bottom:20px;
+  margin-left:40px;
+  margin-right:40px;
+}
+
+.task-viewer-insight h3{
+  font-size:30px;
+  font-family: 'Roboto', sans-serif;
+  color:#F4511E;
+  font-weight:400;
+  margin-top:20px;
+  margin-bottom:20px;
+  margin-left:40px;
+}
+.task-viewer-insight h2{
+  font-size:25px;
+  font-family: 'Roboto', sans-serif;
+  color:#F4511E;
+  font-weight:300;
+  margin-top:10px;
+  margin-bottom:20px;
+  margin-left:45px;
+}

@@ -22,10 +22,24 @@ var ProjectSchema = new Schema({
 		required: 'Please fill Project description',
 		trim: true
 	},
+	color: {
+		type: String,
+		default: 'blue',
+		trim: true
+	},
 	participants: {
 		type: Number,
-		default: '',
-		required: 'Please fill Project description',
+		default: 0,
+		trim: true
+	},
+	numberinsights: {
+		type: Number,
+		default: 0,
+		trim: true
+	},
+	numbertasks: {
+		type: Number,
+		default: 0,
 		trim: true
 	},
 	created: {
