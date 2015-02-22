@@ -1,9 +1,11 @@
 body {
 	background-color:#FAFAFA;
+
 }
 
 .content {
 	background-color:#FAFAFA;
+
 	margin-top: 50px;
 }
 .undecorated-link:hover {
@@ -17,4 +19,128 @@ body {
 }
 .ng-valid.ng-dirty {
 	border-color: #78FA89;
+}
+
+.navbar-brand{
+	/*color: #F44336;*/
+
+
+	color: rgba(0,0,255,0.5);
+	/*	color: rgba(13,71,161,0.5);*/
+	font-family: 'Roboto', sans-serif;
+	font-weight:700;
+	font-size:3.3em;
+	margin-top:10px;
+	margin-bottom:10px;
+	text-shadow:none;
+	/*text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.2);*/
+}
+
+.navbar-brand:after {
+
+	content: "insighted";
+
+
+	margin-left:-190px;
+
+	color: rgba(255,0,0,0.5);
+
+}
+
+.navbar-brand:hover{
+
+	color: rgba(0,0,255,0.5);
+
+	/*text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 2px 2px 0px rgba(0,0,0,0.2);*/
+	/*text-shadow: -1px -1px 0px rgba(255,255,255,0.1), 1px 1px 0px rgba(0,0,0,0.1);*/
+}
+
+
+.navbar-brand:hover::after{
+	margin-left:-189px;
+}
+
+
+
+.banner{
+	position: absolute;
+	margin-top:20px;
+	left:0px;
+	width: 100%;
+	background-color:#FAFAFA;
+	padding-top:10px;
+	padding-bottom:20px;
+
+
+}
+
+.banner h1{
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	font-size:5em;
+	font-weight:300;
+	margin-bottom:10px;
+}
+
+.banner h2{
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	font-size:2.9em;
+	font-weight:100;
+}
+.banner a:hover{
+	color:black;
+	text-decoration:underline;
+
+
+}
+.banner a{
+	color:black;
+}
+
+.navbar{
+	background-color:#EEEEEE;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+}
+.navbar-nav-main a{
+	font-family: 'Roboto', sans-serif;
+	font-weight:100;
+	font-size:2.2em;
+	margin-top:22px;
+	margin-left:30px;
+	color:black;
+}
+.orange-background{
+	position:absolute;
+	left:0px;
+	background-color:#FAFAFA;
+	height:100%;
+	width:100%;
+	z-index:-100;
+}
+
+.navbar-right{
+	margin-top:20px;
+	font-family: 'Roboto Slab', serif;
+	font-weight:300;
+	font-size:1.6em;
+}
+
+.navbar-right a{
+	color:black;
+}
+
+
+.sign-in {
+
+}
+
+.sign-in h1{
+	color: black;
+	font-family: 'Roboto', sans-serif;
+	font-size:5em;
+	font-weight:300;
+	margin-bottom:10px;
+
 }

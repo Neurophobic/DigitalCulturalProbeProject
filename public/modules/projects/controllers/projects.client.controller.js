@@ -56,6 +56,10 @@ function($scope, $stateParams, $location, Authentication, Projects, $rootScope) 
 		$rootScope.passedProjectId = $stateParams.projectId;
 
 	};
+
+	$scope.getRandom = function(){
+		return Math.floor((Math.random()*25)+55);
+	};
 }
 ]);
 
