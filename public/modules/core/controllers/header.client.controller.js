@@ -16,3 +16,45 @@ angular.module('core').controller('HeaderController', ['$scope', 'Authentication
 		});
 	}
 ]);
+
+
+
+angular.module('core').controller('CarouselDemoCtrl',
+function ($scope, $animate) {
+	$animate.enabled(false);
+	$scope.slides = [
+	{ image: 'modules/core/img/project-form.png' },
+	{ image: 'modules/core/img/project-slide-new.png', text: 'blah' },
+
+	];
+});
+
+angular.module('core').controller('taskCarousel',
+function ($scope, $animate) {
+	$animate.enabled(false);
+	$scope.slides = [
+	{ image: 'modules/core/img/task-slide1.png' },
+
+
+	];
+});
+
+angular.module('core').controller('appCarousel',
+function ($scope, $animate) {
+	$animate.enabled(false);
+	$scope.slides = [
+	{ image: 'modules/core/img/app-slide1.png' },
+
+
+	];
+});
+
+angular.module('core').controller('insightsCarousel',
+function ($scope, $animate) {
+	$animate.enabled(false);
+	$scope.slides = [
+	{ image: 'modules/core/img/insights-slide1.png' },
+
+
+	];
+});

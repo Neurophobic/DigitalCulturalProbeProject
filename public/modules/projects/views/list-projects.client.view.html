@@ -3,7 +3,7 @@
 
 
 
-  <div class="banner">
+  <div class="list-projects-banner">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h1> Projects </h1>
@@ -20,69 +20,90 @@
 
       <div class="col-xs-6 col-sm-4 card" data-ng-repeat="project in projects">
 
-        <a  data-ng-href="#!/projects/{{project._id}}" class="list-group-item card-content">
-          <div class="row">
-            <div class="col-xs-3 profile-circle-card"> <img src="modules/projects/img/{{project.color}}.png" class="img-responsive" /> 	</div>
-            <div class="col-xs-9">
-              <div class="row"><h1 data-ng-bind="project.name"></h1></div>
-              <div class="row"><h2 data-ng-bind="project.desc"></h2></div>
+        <!--  <div class="row">
 
 
-            </div>
-          </div>
-          <div class="row  featured-project-img-row" >
-            <div class="col-xs-12 featured-project-img-col">
-              <img ng-src="https://placeimg.com/400/1{{getRandom()}}/any" class="img-responsive"/>
-            </div>
-          </div>
-
-
-
-
-
-          <div class="row">
-            <div class="col-xs-10 col-xs-offset-1">
-              <h3>{{project.numberinsights}} insights</h3>
-            </div>
-          </div>
-
-
-          <div class="row">
-            <div class="col-xs-10 col-xs-offset-1">
-              <h3>{{project.participants}} participants</h3>
-            </div>
-          </div>
-
-
-          <div class="row">
-            <div class="col-xs-10 col-xs-offset-1">
-              <h3>{{project.numbertasks}} tasks</h3>
-            </div>
-          </div>
-
-
-
-
-
-        </a>
+        <div class="col-sm-4 small-tab">
+        <h3>{{project.numbertasks}} tasks</h3>
       </div>
 
-      <div class="col-xs-6 col-sm-4 create-button-card">
-        <a href="/#!/projects/create">
-        <div class="row text-center">
-          <i class="glyphicon glyphicon-plus"> </i>
-          <h1> Create a new project </h1>
 
-        </div>
-      </a>
+
+      <div class="col-sm-4 small-tab">
+      <h3>{{project.numberinsights}} insights</h3>
+    </div>
+  </div> -->
+
+  <a  data-ng-href="#!/projects/{{project._id}}" class="list-group-item card-content">
+
+
+
+    <div class="row project-prev-name-desc">
+      <div class="col-xs-3 profile-circle-card background-{{project.color}}">
+        <h2>{{project.numberinsights}}</h2>
+      </div>
+      <div class="col-xs-8">
+        <div class="row"><h1 data-ng-bind="project.name"></h1></div>
+        <div class="row"><h2 data-ng-bind="project.desc"></h2></div>
+
+
+      </div>
+    </div>
+
+    <div class="row  featured-project-img-row" >
+      <div class="col-xs-12 featured-project-img-col">
+        <img ng-src="https://placeimg.com/400/1{{getRandom()}}/any" class="img-responsive"/>
       </div>
     </div>
 
 
 
 
-
-
-
+    <!--
+    <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+    <h3>{{project.numberinsights}} insights</h3>
   </div>
+</div>
+
+
+<div class="row">
+<div class="col-xs-10 col-xs-offset-1">
+<h3>{{project.participants}} participants</h3>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-xs-10 col-xs-offset-1">
+<h3>{{project.numbertasks}} tasks</h3>
+</div>
+</div>
+
+
+-->
+
+
+
+</a>
+</div>
+
+<div class="col-xs-6 col-sm-4 create-button-card">
+  <a href="/#!/projects/create">
+    <div class="row text-center">
+      <i class="glyphicon glyphicon-plus"> </i>
+      <h1> Create a new project </h1>
+
+    </div>
+  </a>
+</div>
+</div>
+
+
+
+
+
+
+
+</div>
 </section>

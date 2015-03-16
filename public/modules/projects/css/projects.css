@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
 @import url(http://fonts.googleapis.com/css?family=Raleway:500,700,400,300);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,500,700);
-
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300);
 
 .cust-list-profile{
   padding-top: 10px;
@@ -11,8 +11,52 @@
 
 
 }
+.small-tab-first {
+  background:#FFF;
+  height:30px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin-left:15px;
+}
+
+.small-tab{
+  background:#F5f5f5;
+  height:30px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin-left:20px;
+}
+.small-tab h3{
+  font-family: 'Raleway', sans-serif;
+  color:#555;
+  font-size:17px !important;
+  margin-top:4px !important;
+  margin-left: -10px !important;
+
+}
+
+
+
+.big-tab{
+  background:#F5f5f5;
+  height:50px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin-left:20px;
+  margin-bottom:0px !important;
+  z-index:0;
+}
+.big-tab h3{
+  font-family: 'Raleway', sans-serif;
+  color:#555;
+  font-size:25px !important;
+  margin-top:4px !important;
+  margin-left: -5px !important;
+
+}
+
+.project-prev-name-desc{
+  height:80px;
+}
 .view-projects-container{
-  padding-top:250px;
+  padding-top:120px;
 
 }
 .create-button-card{
@@ -25,7 +69,7 @@
 }
 
 .create-button-card h1{
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Raleway', sans-serif;
   color:#CCCCCC;
   margin-top:100px;
   font-size:1.5em;
@@ -33,7 +77,7 @@
 
 .projects-list-header h1{
   font-size:4.2em;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color:#202020;
   margin-top:30px;
   margin-bottom:30px;
@@ -51,20 +95,20 @@
 
 .card h1 {
   font-size:26px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color:#202020;
   margin-top:5px;
   margin-bottom:5px;
 }
 
 .card h2 {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Raleway', sans-serif;
   font-size:16px;
   margin-top: 2px;
 }
 
 .card h3 {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Raleway', sans-serif;
   margin-top:25px;
   font-size: 24px;
   font-weight:500;
@@ -87,9 +131,9 @@
 
 .card-content{
   padding:15px;
-  padding-bottom:25px;
+  padding-bottom:0px;
   border:0px;
-  background-color: #FFFFFF;
+  background-color: #FAFAFA;
   -webkit-border-radius: 2px !important;
 
   -moz-border-radius: 2px !important;
@@ -97,7 +141,8 @@
   border-radius: 2px !important;
 
   /*box-shadow:12px 18px #EEEEEE, 8px 12px #EEEEEE, 4px 6px #EEEEEE, 1px 2px #EEEEEE,2px 3px #EEEEEE ,3px 4px #EEEEEE;*/
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
+/*  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
 }
 
 /*.card-content::after {
@@ -147,12 +192,68 @@
   transform-origin: top;
 }
 */
-
-
 .profile-circle-card {
-  padding-left:15px;
-  padding-right:15px;
+  height:70px;
+  width:70px;
+
+  margin-left:15px;
+  margin-right:10px;
+  border-radius:100px;
+
 }
+
+.profile-circle-card h2{
+  text-align:center;
+  color:#fafafa;
+  font-size:2.7em;
+  margin-top:12px;
+
+}
+.background-green {
+
+  background-color:#4caf50;
+}
+
+.background-blue {
+
+  background-color:#2196f3;
+}
+
+.background-red {
+
+  background-color:#f44336;
+}
+
+.background-yellow {
+
+  background-color:#ffeb3b;
+}
+
+
+.list-projects-banner{
+
+  position:absolute;
+  margin-top: -50px;
+  left:0px;
+  width:100%;
+  background-color:#f44336;
+
+  padding-top:10px;
+}
+.list-projects-banner h1{
+  font-family: 'Open Sans', sans-serif;
+  font-weight:300;
+  font-size:3.1em;
+  color:white;
+}
+.list-projects-banner h2{
+  color:white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:200;
+  font-size:2.3em;
+  padding-bottom:20px;
+}
+
 
 
 /*
@@ -171,7 +272,7 @@ The create project form.
   padding-left:40px;
   padding-right:40px;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color:white;
   font-weight:300;
   font-size:30px;
@@ -194,7 +295,7 @@ The create project form.
   padding-left:20px;
   padding-right:20px;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color:#202020;
   font-weight:500;
   font-size:30px;
@@ -209,7 +310,7 @@ The create project form.
 .create-text-area{
   margin-top:70px;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color:#202020;
   font-weight:500;
   font-size:40px;
@@ -240,7 +341,7 @@ input[type="text"].create-text-field, textarea {
 
   font-size:50px;
   height: 75px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color:#202020;
   font-weight:500;
 
@@ -258,7 +359,7 @@ input[type="text"].create-text-field, textarea {
 .create-project-card h1 {
 
   font-size:70px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color:#202020;
   margin-top:30px;
   margin-bottom:5px;
@@ -272,7 +373,7 @@ input[type="text"].create-text-field, textarea {
 
 .color-controls h2{
   font-size:45px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight:500;
   color:#202020;
   margin-top:15px;
@@ -342,9 +443,42 @@ The view project.
 
 */
 
+.view-projects-banner{
+
+  z-index:10;
+  position:absolute;
+  margin-top: -50px;
+  left:0px;
+  width:100%;
+
+
+  padding-top:10px;
+}
+.view-projects-banner h1{
+  font-family: 'Open Sans', sans-serif;
+  font-weight:300;
+  font-size:3.3em;
+  color:white;
+}
+.view-projects-banner h2{
+  color:white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:200;
+  font-size:2.3em;
+  padding-bottom:20px;
+}
+
+
+.view-projects-banner a{
+  font-family: 'Open Sans', sans-serif;
+  font-weight:300;
+
+  color:white;
+}
 .view-project-card {
-  margin-top: 55px;
-  font-family: 'Roboto', sans-serif;
+
+  margin-top: 200px;
+  font-family: 'Open Sans', sans-serif;
 
 }
 
@@ -356,7 +490,7 @@ The view project.
 
 .project-view-title h1 {
   font-size:60px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color:#202020;
   margin-top:20px;
   margin-bottom:5px;
@@ -373,7 +507,7 @@ The view project.
 
 
 .project-view-title h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size:25px;
   margin-top: 10px;
   color: #606060;
@@ -391,7 +525,7 @@ The view project.
   margin-left:50px;
 
   font-size:45px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight:500;
   color:#202020;
 }
@@ -408,6 +542,15 @@ The view project.
 .top-task-prev{
   background-color:green;
   color:white;
+  height:85px;
+}
+
+.top-task-prev:hover{
+  cursor:pointer;
+}
+
+.top-task-prev h2{
+  font-size:2.7em;
 }
 
 .text-top-color {
@@ -423,15 +566,15 @@ The view project.
 
 .task-preview-project {
   background-color:#FFFFFF;
-  margin-top:25px;
+  margin-top:0px;
   margin-left: 40px;
   margin-right: 40px;
 }
 
 
 .task-preview-project h1 {
-  font-size:45px;
-  font-family: 'Roboto', sans-serif;
+  font-size:1em !important;
+  font-family: 'Open Sans', sans-serif;
   font-weight:400;
   color:#202020;
   margin-top:30px;
@@ -439,11 +582,11 @@ The view project.
   margin-bottom:30px;
 }
 .small-type-icon {
-  color:#202020;
+  color:#FAFAFA;
   font-size:50px;
   margin-top:15px;
   margin-bottom:25px;
-  margin-left:-25px;
+  margin-left:2px;
   margin-right:25px;
 }
 .image-type-circle{
@@ -474,4 +617,94 @@ The view project.
   width:75px;
   border-radius: 75px;
   content:'image type';
+}
+
+.task-insight-count{
+  background:#fafafa;
+  border-radius:100%;
+  height:65px;
+  width:65px;
+  margin-top:10px;
+  margin-left:10px;
+}
+
+.task-insight-count h3{
+  text-align:center;
+  margin-top:10px;
+  font-size:3em;
+}
+
+.image-color h3{
+  color:#ffeb4b;
+}
+
+.sound-color h3{
+  color:#f44336;
+}
+
+.text-color h3{
+  color:#4caf50;
+}
+
+.task-options button{
+  background:#EF5350;
+  border: 5px solid #D32F2F;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size:1.4em;
+  font-weight:400;
+  text-align:center;
+  padding:10px;
+  margin-top:15px;
+  margin-bottom: 75px;
+  margin-left:45px;
+
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+
+  -webkit-transition: border 0.3s; /* For Safari 3.1 to 6.0 */
+  transition: border 0.3s;
+}
+.task-options button:hover {
+  border:5px solid #EF5350;
+}
+
+.project-controls{
+
+}
+
+.project-controls button{
+  background:rgba(0,0,0,0.1);
+  border: 5px solid rgba(0,0,0,0.2);
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size:1.3em;
+  font-weight:400;
+  text-align:center;
+  padding:10px;
+  margin-top:15px;
+  margin-bottom: 20px;
+  margin-left:45px;
+
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+
+  -webkit-transition: border 0.3s; /* For Safari 3.1 to 6.0 */
+  transition: border 0.3s;
+}
+
+.sample-show-hide{
+  height:150px;
+}
+
+.sample-show-hide {
+  -webkit-transition:height 0.3s, opacity 0.2s;
+  transition:height 0.3s, opacity 0.2s;
+}
+
+.sample-show-hide.ng-hide{
+
+  height:0;
 }

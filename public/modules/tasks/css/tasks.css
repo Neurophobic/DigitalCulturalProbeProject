@@ -99,14 +99,22 @@ margin-top:0px;
 */
 
 .task-viewer-top {
+
   margin-top:40px;
   border:0px;
   background-color: #f9f9f9;
+
+}
+
+.task-viewer-top:hover{
+
+  cursor:pointer;
+
 }
 
 .task-viewer-top h1{
-  font-size:55px;
-  font-family: 'Roboto', sans-serif;
+  font-size:2.3em;
+  font-family: 'Open Sans', sans-serif;
   color:#202020;
   font-weight:500;
   margin-top:15px;
@@ -115,35 +123,35 @@ margin-top:0px;
 }
 
 .task-viewer-insight {
-  margin-top:40px;
+  margin-top:15px;
   border:0px;
-  background-color: #f9f9f9;
+  background-color: #fafafa;
 }
 .task-viewer-insight p{
-  font-size:2em;
-  font-family: 'Roboto', sans-serif;
-  color:#202020;
+  font-size:1.5em;
+  font-family: 'Raleway', sans-serif;
+  color:#212121;
   font-weight:400;
-  margin-top:30px;
-  margin-bottom:20px;
+  margin-top:20px;
+  margin-bottom:10px;
   margin-left:40px;
   margin-right:40px;
 }
 
 .task-viewer-insight h4{
-  font-size:3em;
-  font-family: 'Roboto', sans-serif;
-  color:#202020;
+  font-size:2.5em;
+  font-family: 'Raleway', sans-serif;
+  color:#212121;
   font-weight:400;
-  margin-top:30px;
-  margin-bottom:20px;
+  margin-top:20px;
+  margin-bottom:10px;
   margin-left:40px;
   margin-right:40px;
 }
 
 .task-viewer-insight h3{
   font-size:30px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color:#F4511E;
   font-weight:400;
   margin-top:20px;
@@ -152,10 +160,39 @@ margin-top:0px;
 }
 .task-viewer-insight h2{
   font-size:25px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color:#F4511E;
   font-weight:300;
   margin-top:10px;
   margin-bottom:20px;
   margin-left:45px;
+}
+
+
+.task-box{
+
+
+ -webkit-transition:height 0.2s;
+ transition:height 0.2s;
+}
+
+.task-box.ng-hide{
+
+  height:0;
+}
+
+
+
+
+
+.task-box-color-text{
+  border: solid #4caf50 10px;
+}
+
+.task-box-color-image{
+  border: solid #ffeb3b 10px;
+}
+
+.task-box-color-sound{
+  border: solid #f44336 10px;
 }
