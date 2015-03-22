@@ -50,20 +50,36 @@
       </div>
     </div>
 
-    <div class="row  featured-project-img-row" >
-      <div class="col-xs-12 featured-project-img-col">
-        <img ng-src="https://placeimg.com/400/1{{getRandom()}}/any" class="img-responsive"/>
+    <div class="row  featured-insight-text-row" >
+      <div class="col-xs-12 featured-insight-text-col featured-color-{{project.color}}" style="overflow:hidden;">
+        <div ng-if="project.featuredinsighttype == 'text'">
+        <p ng-if="project.featuredtextinsight.length > 40">{{project.featuredtextinsight}}</p>
+
+        <h1 ng-if="project.featuredtextinsight.length < 20 ">{{project.featuredtextinsight}}</h1>
+
+        <p ng-if="project.featuredtextinsight == 'This is a text insight'">Waiting for insights...<p>
+      </div>
+        <div ng-if="project.featuredinsighttype == 'image'">
+
+          <img ng-src="http://178.62.118.59:3001/upload/{{project.featuredimageinsight}}" class="img-responsive"  />
+        </div>
       </div>
     </div>
-
-
-
-
-    <!--
-    <div class="row">
-    <div class="col-xs-10 col-xs-offset-1">
-    <h3>{{project.numberinsights}} insights</h3>
+    <!-- Working img thing
+    <div class="row  featured-project-img-row" >
+    <div class="col-xs-12 featured-project-img-col">
+    <img ng-src="https://placeimg.com/400/1{{getRandom()}}/any" class="img-responsive"/>
   </div>
+</div>
+-->
+
+
+
+<!--
+<div class="row">
+<div class="col-xs-10 col-xs-offset-1">
+<h3>{{project.numberinsights}} insights</h3>
+</div>
 </div>
 
 

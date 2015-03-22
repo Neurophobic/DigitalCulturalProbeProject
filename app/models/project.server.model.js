@@ -37,6 +37,16 @@ var ProjectSchema = new Schema({
 		default: 0,
 		trim: true
 	},
+	featuredinsighttype: {
+		type: String,
+		default:'text',
+		trim: true
+	},
+	featuredtextinsight: {
+		type: String,
+		default:'This is a text insight',
+		trim: true
+	},
 	numbertasks: {
 		type: Number,
 		default: 0,

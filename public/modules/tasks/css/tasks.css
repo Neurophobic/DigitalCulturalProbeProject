@@ -24,6 +24,17 @@
   box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
 }
 
+.type-controls h2{
+  font-size:35px;
+  font-family: 'Raleway', serif;
+  font-weight:500;
+  color:#212121;
+  margin-top:25px;
+  margin-bottom:5px;
+  margin-left: 15px;
+
+
+}
 
 
 .type-controls input[type="radio"]{
@@ -81,7 +92,8 @@ margin-top:0px;
 }
 
 .type-controls input[type="radio"]:checked + label {
-  outline:5px dashed #424242;
+  border:10px solid #E0E0E0;
+  border-radius:130px;
 }
 
 

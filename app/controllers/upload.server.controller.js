@@ -21,9 +21,9 @@ exports.create = function(req, res) {
 
 
   writeStream.on('close', function() {
-    return res.status(200).send({
-      message: 'Success'
-    });
+    //return res.status(200).send({
+    //  message: 'Success'
+    //});
   });
 
   writeStream.write(part.data);
