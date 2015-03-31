@@ -9,102 +9,81 @@
 
 
 
-	<div class="view-projects-banner background-{{project.color}}">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<h1>	<a href="/#!/projects">Projects</a> > {{project.name}} </h1>
-				<h2> {{project.desc}} </h2>
+
+<div class="col-md-12 col-sm-12">
+
+	<section class="project-section card-content view-project-card" >
 
 
 
-			</div>
-		</div>
-
-		<div class="col-md-6 col-md-offset-3 project-controls">
-			<div class="row">
-
-				<div class="col-xs-4">
-					<div class="row">
-						<img class="sample-show-hide" ng-show="showQR" ng-src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{project._id}}"/>
-						<div id="secretcode">
-
-						</div>
-						<script>
-						var url      = window.location.href;
-						console.log(url);
-						</script>
-
-					</div>
-					<div class="row">
-						<button type="button" ng-click="showQR = ! showQR">
-							<div ng-show="!showQR"><i class="glyphicon glyphicon-qrcode"></i> SHOW QR CODE</div>
-							<div ng-show="showQR"><i class="glyphicon glyphicon-qrcode"></i> HIDE QR CODE</div>
-						</button>
-					</div>
-				</div>
-
-
-				<div class="col-xs-4">
-
-
-					<a href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{project._id}}">
-						<button type="button"><i class="glyphicon glyphicon-cog"></i> EDIT PROJECT </button>
-					</a>
-				</div>
-
-				<div class="col-xs-4">
-
-
-					<a href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{project._id}}">
-						<button type="button"><i class="glyphicon glyphicon-star"></i> VIEW ALL INSIGHTS </button>
-					</a>
-				</div>
-
-
-
-			</div>
-		</div>
-	</div>
-	<div class="col-md-12">
-
-		<section class="project-section card-content view-project-card" >
-
-
-
-			<section data-ng-controller="TasksController as tasksCtrl ">
+		<section data-ng-controller="TasksController as tasksCtrl ">
 
 
 
 
-
+			<div class="col-md-7">
 				<task-list>
 				</task-list>
-				<div class="row task-options">
-					<div class="col-md-4">
-
-						<button type="button" ng-click="tasksCtrl.modalCreate('lg')">CREATE A NEW TASK</button>
-
-
+			</div>
+			<div class="col-md-5 ">
+				<div class="row ">
+					<div class="col-md-2 text-center">
+						<h2 class="insight-num-circle ">{{project.numberinsights}}</h2>
+					</div>
+					<div class="project-view-desc col-md-10">
+						<h1>{{project.name}} </h1>
+						<h3>{{project.desc}} </h3>
 					</div>
 				</div>
 
-			</section>
+				<div class="row">
+					<section  data-ng-controller="InsightsController" data-ng-init="find()" >
+
+						<div data-ng-repeat="insight in insights | filter:{ projectid: project._id } |limitTo:2" >
+
+
+							<div class="col-md-6 text-center insight-prev-box top-border-{{insight.type}}">
+								<h2 class="insight-prev-text">"{{insight.text}}"</h2>
+								<h3 class="insight-prev-creator">{{insight.user.displayName}}</h3>
+								<h4 class="insight-prev-creator">{{insight.created}}</h4>
+
+							</div>
 
 
 
-			<!--	<div class="row project-view-title">
+						</div>
 
-			<div class="col-xs-2 profile-circle-view">
-			<img src="modules/projects/img/{{project.color}}.png" class="img-responsive" />
-		</div>
+					</section>
+				</div>
 
-		<div class="col-xs-10">
-		<div class="row">
-		<h1 data-ng-bind="project.name"></h1>
+			</div>
+
+			<div class="row task-options">
+				<div class="col-md-4">
+
+					<button type="button" ng-click="tasksCtrl.modalCreate('lg')">CREATE A NEW TASK</button>
+
+
+				</div>
+			</div>
+
+		</section>
+
+
+
+		<!--	<div class="row project-view-title">
+
+		<div class="col-xs-2 profile-circle-view">
+		<img src="modules/projects/img/{{project.color}}.png" class="img-responsive" />
 	</div>
 
-	<div class="row ">
-	<h2 data-ng-bind="project.desc"></h2>
+	<div class="col-xs-10">
+	<div class="row">
+	<h1 data-ng-bind="project.name"></h1>
+</div>
+
+<div class="row ">
+<h2 data-ng-bind="project.desc"></h2>
 </div>
 
 </div>
@@ -150,10 +129,10 @@
 <script>
 
 
-console.log(url);
-function get_short_url(long_url, login, api_key, func)
-{
-	$.getJSON(
+
+	function get_short_url(long_url, login, api_key, func)
+	{
+		$.getJSON(
 		"http://api.bitly.com/v3/shorten?callback=?",
 		{
 			"format": "json",
@@ -165,24 +144,24 @@ function get_short_url(long_url, login, api_key, func)
 		{
 			func(response.data.url);
 		}
-	);
-};
+		);
+	};
 
-/*
-Sign up for Bitly account at
-https://bitly.com/a/sign_up
+	/*
+	Sign up for Bitly account at
+	https://bitly.com/a/sign_up
 
-and upon completion visit
-https://bitly.com/a/your_api_key/
-to get "login" and "api_key" values
-*/
-var login = "o_5kt1oamiig";
-var api_key = "R_f430d06f27c944e58a8764e83d60dfa6";
-var long_url = window.location.href;
+	and upon completion visit
+	https://bitly.com/a/your_api_key/
+	to get "login" and "api_key" values
+	*/
+	var login = "o_5kt1oamiig";
+	var api_key = "R_f430d06f27c944e58a8764e83d60dfa6";
+	var long_url = window.location.href;
 
-get_short_url(long_url, login, api_key, function(short_url) {
-	console.log(short_url);
-});
+	get_short_url(long_url, login, api_key, function(short_url) {
+		console.log(short_url);
+	});
 
 
 

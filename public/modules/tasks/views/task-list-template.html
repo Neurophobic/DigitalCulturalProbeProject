@@ -1,126 +1,240 @@
 
 
 <!--<a  data-ng-href="#!/tasks/{{task._id}}" data-ng-repeat="task in tasksCtrl.tasks | filter:{ project: $root.passedProjectId }" > -->
+<!--<div class="row task-desc">
+<h1>Tasks</h1>
+</div>-->
+
+<a data-ng-href="#!/tasks/{{task._id}}" data-ng-repeat="task in tasksCtrl.tasks | filter:{ project: $root.passedProjectId }" >
+  <div class="col-md-6  task-box {{task.type}}-border">
 
 
-<a ng-click="showTask = ! showTask" data-ng-repeat="task in tasksCtrl.tasks | filter:{ project: $root.passedProjectId }" >
+    <div ng-if="task.type == 'image'"class="row text-center">
 
+      <i class="ion ion-camera box-icon image-icon">
+        <h2 ng-if="task.numberinsights != 0" style="background:#998d23">{{task.numberinsights}}</h2>
+      </i>
 
-  <div class="col-md-11 card-content task-prev">
+    </div>
 
-    <div class="row top-task-prev {{task.type}}-top-color" >
+    <div ng-if="task.type == 'sound'"class="row text-center">
 
-      <div class="col-xs-1 task-insight-count {{task.type}}-color">
-        <h3> {{task.numberinsights}} </h3>
-      </div>
+      <i class="ion ion-mic-a box-icon sound-icon">
+        <h2 ng-if="task.numberinsights != 0" style="background:#922820 ">{{task.numberinsights}}</h2>
+      </i>
 
+    </div>
 
-      <div ng-if="task.type == 'image'"class="col-xs-1">
+    <div ng-if="task.type == 'text'"class="row text-center">
 
-        <i class="glyphicon glyphicon-camera small-type-icon"></i>
+      <i class="ion ion-chatbubble-working box-icon text-icon">
 
-      </div>
+        <h2 ng-if="task.numberinsights != 0" style="background:#2d6930">{{task.numberinsights}}</h2>
+      </i>
 
-      <div ng-if="task.type == 'sound'"class="col-xs-1">
-
-        <i class="glyphicon glyphicon-volume-up small-type-icon"></i>
-
-      </div>
-
-      <div ng-if="task.type == 'text'"class="col-xs-1">
-
-        <i class="glyphicon glyphicon-pencil small-type-icon"></i>
-
-      </div>
-
-
-      <div class="col-md-9">
-        <h2>{{task.name}}</h2>
-      </div>
-
+    <!---<i class="glyphicon glyphicon-pencil box-icon text-icon"></i>-->
 
 
     </div>
-    <div class="row task-box task-box-color-{{task.type}}" ng-show="showTask">
-      <div class="col-xs-12">
 
 
 
-        <!--TEXT INSIGHT -->
-
-        <div ng-if="task.type == 'text'" ng-show="showTask">
-
-          <section  data-ng-controller="InsightsController" data-ng-init="find()" >
-
-            <div data-ng-repeat="insight in insights | filter:{ taskid: task._id }" class="task-viewer-insight card-content">
-
-              <div class="row">
-                <p ng-if="insight.text.length > 200">
-                  "{{insight.text}}"
-                </p>
-                <h4 ng-if="insight.text.length < 200">
-                  "{{insight.text}}"
-                </h4>
-              </div>
-              <div class="row">
-
-                <h3>-{{insight.user.displayName}}</h3>
-                <h2 data-ng-bind="insight.created | date:'medium'"></h2>
-
-
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-        <!--TEXT INSIGHT END -->
-
-
-        <!-- IMAGE task start -->
-        <div ng-if="task.type == 'image'" ng-show="showTask">
-
-
-
-          <section  data-ng-controller="InsightsController" data-ng-init="find()" >
-
-
-
-            <div data-ng-repeat="insight in insights | filter:{ taskid: task._id }" class="task-viewer-insight col-md-10 col-md-offset-1">
-
-              <div class="row">
-                <img ng-src="http://178.62.118.59:3001/upload/{{insight._id}}" class="img-responsive img-rounded" />
-              </div>
-              <div class="row">
-
-                <h3>-{{insight.user.displayName}}</h3>
-                <h2 data-ng-bind="insight.created | date:'medium'"></h2>
-
-
-              </div>
-
-
-
-            </div>
-
-          </section>
-
-        </div>
-
-        <!-- IMAGE task END -->
-
-
-
-
-      </div>
+    <div class="row text-center">
+      <h1 class="task-name-test">{{task.name}}</h1>
     </div>
 
-    <!--<div class="row">
-    <div class="col-md-10 col-md-offset-1">
-    <p>{{task.purpose}} </p>
+    <div class="row text-center">
+      <h3 class="task-desc">{{task.purpose}}</h3>
+    </div>
+
+
+
   </div>
+
+
+  <script>
+  var clicked = 0;
+  $(".task-box").click(function(){
+    if(clicked==0){
+      $(this).addClass("col-md-12");
+      $(this).removeClass("col-md-4");
+      clicked = 1;
+      console.log("opening");
+    }else{
+      $(this).removeClass("col-md-12");
+      $(this).addClass("col-md-4");
+      clicked = 0;
+      console.log("closing");
+    }
+  });
+  </script>
+  <!--
+  <div class="row task-row ">
+  <div class="col-md-8 insight-col">
+  <div class="row">
+
+  <div class="col-md-3 ">
+  <div ng-if="task.type == 'text'"class="col-xs-1">
+
+  <i class="glyphicon glyphicon-pencil corner-icon"></i>
+
+</div>
+</div>
+
+<section  data-ng-controller="InsightsController" data-ng-init="find()" >
+
+<div data-ng-repeat="insight in insights | filter:{ taskid: task._id } |limitTo:1" >
+
+<div class="row">
+<div class="col-md-10 text-center">
+<p>"{{insight.text}}"</p>
+</div>
+</div>
+
+
+</div>
+
+</section>
+
+</div>
+
+
+</div>
+<div class="col-md-4 {{task.type}}-top-color task-info">
+<div class="row">
+<h1>{{task.name}}</h1>
+</div>
+<div class="row">
+<h4 data-ng-bind="task.created | date:'medium'"></h4>
+</div>
+<div class="row">
+<h2>{{task.purpose}}</h2>
+</div>
+</div>
+
+</div>
+-->
+
+<!--<div class="col-md-12 card-content task-prev">
+
+<div class="row top-task-prev {{task.type}}-top-color" >
+
+<div class="col-xs-1 task-insight-count {{task.type}}-color">
+<h3> {{task.numberinsights}} </h3>
+</div>
+
+
+<div ng-if="task.type == 'image'"class="col-xs-1">
+
+<i class="glyphicon glyphicon-camera small-type-icon"></i>
+
+</div>
+
+<div ng-if="task.type == 'sound'"class="col-xs-1">
+
+<i class="glyphicon glyphicon-volume-up small-type-icon"></i>
+
+</div>
+
+<div ng-if="task.type == 'text'"class="col-xs-1">
+
+<i class="glyphicon glyphicon-pencil small-type-icon"></i>
+
+</div>
+
+
+<div class="col-md-9">
+<h2>{{task.name}}</h2>
+</div>
+
+
+
+</div>
+<div class="row task-box task-box-color-{{task.type}}" ng-show="showTask">
+<div class="col-xs-12">
+-->
+
+
+<!--TEXT INSIGHT -->
+
+<!--  <div ng-if="task.type == 'text'" ng-show="showTask">
+
+<section  data-ng-controller="InsightsController" data-ng-init="find()" >
+
+<div data-ng-repeat="insight in insights | filter:{ taskid: task._id }" class="task-viewer-insight card-content">
+
+<div class="row">
+<p ng-if="insight.text.length > 200">
+"{{insight.text}}"
+</p>
+<h4 ng-if="insight.text.length < 200">
+"{{insight.text}}"
+</h4>
+</div>
+<div class="row">
+
+<h3>-{{insight.user.displayName}}</h3>
+<h2 data-ng-bind="insight.created | date:'medium'"></h2>
+
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+-->
+<!--TEXT INSIGHT END -->
+
+
+<!-- IMAGE task start -->
+
+<!--
+<div ng-if="task.type == 'image'" ng-show="showTask">
+
+
+
+<section  data-ng-controller="InsightsController" data-ng-init="find()" >
+
+
+
+<div data-ng-repeat="insight in insights | filter:{ taskid: task._id }" class="task-viewer-insight col-md-10 col-md-offset-1">
+
+<div class="row">
+<img ng-src="http://localhost:3001/upload/{{insight._id}}" class="img-responsive img-rounded" />
+</div>
+<div class="row">
+
+<h3>-{{insight.user.displayName}}</h3>
+<h2 data-ng-bind="insight.created | date:'medium'"></h2>
+
+
+</div>
+
+
+
+</div>
+
+</section>
+
+</div>
+-->
+
+<!-- IMAGE task END
+
+
+
+
+</div>
+
+</div>
+-->
+
+<!--<div class="row">
+<div class="col-md-10 col-md-offset-1">
+<p>{{task.purpose}} </p>
+</div>
 </div> -->
 
 
