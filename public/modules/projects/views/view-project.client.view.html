@@ -34,6 +34,7 @@
 					<div class="project-view-desc col-md-9">
 						<h1>{{project.name}} </h1>
 						<h3>{{project.desc}} </h3>
+						<h1 class="results"></h1>
 					</div>
 				</div>
 
@@ -170,11 +171,16 @@
 	*/
 	var login = "o_5kt1oamiig";
 	var api_key = "R_f430d06f27c944e58a8764e83d60dfa6";
-	var long_url = window.location.href;
+	var winloc = window.location.href;
+	var locsplit = winloc.split("/");
+	var full = "http://insighted.co:3002/#!/projects/" + locsplit[5];
+	console.log(full);
+	var long_url = full;
 	console.log(window.location.href);
 
 	get_short_url(long_url, login, api_key, function(short_url) {
 		console.log(short_url);
+		$('.results').html(short_url);
 	});
 
 
