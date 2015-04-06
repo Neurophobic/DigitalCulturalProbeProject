@@ -47,7 +47,12 @@ module.exports = function(grunt) {
 				options: {
 					livereload: true
 				}
-			}
+			}/*,
+			screenshot: {
+				files: watchFiles.clientCSS,
+				tasks: ['autoshot'],
+
+			}*/
 		},
 		jshint: {
 			all: {
@@ -139,7 +144,27 @@ module.exports = function(grunt) {
 			unit: {
 				configFile: 'karma.conf.js'
 			}
-		}
+		},
+		autoshot: {
+			default_options: {
+				options: {
+					path: './test/screenshot/'+Math.floor(Date.now() / 1000),
+					remote: {
+						files: [
+
+						{ src: 'http://localhost:3001/', dest: Math.floor(Date.now() / 1000)+'.jpg'  },
+						{ src: 'http://localhost:3001/#!/projects', dest: Math.floor(Date.now() / 1000)+'-Projects.jpg' }
+						]
+					},
+
+					viewport: [
+					'1920x1080',
+					'1024x768',
+					'640x960'
+					]
+				},
+			},
+		},
 	});
 
 	// Load NPM tasks
@@ -174,4 +199,8 @@ module.exports = function(grunt) {
 
 	// Test task.
 	grunt.registerTask('test', ['env:test', 'mochaTest', 'karma:unit']);
+
+	//autoshot test
+	grunt.loadNpmTasks('grunt-autoshot');
+	grunt.registerTask('test', ['autoshot']);
 };

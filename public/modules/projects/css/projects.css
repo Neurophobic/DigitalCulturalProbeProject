@@ -10,12 +10,14 @@
 .hello {
 
 
+
 }
 .small-tab-first {
   background:#FFF;
   height:30px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   margin-left:15px;
+
 }
 
 .small-tab{
@@ -668,7 +670,7 @@ The view project.
   margin-right:25px;
 }
 .image-type-circle{
-  background-color:#FFEB3B;
+  background-color:#FDD835;
 
   margin-top:15px;
   height:75px;
@@ -713,7 +715,7 @@ The view project.
 }
 
 .image-color h3{
-  color:#ffeb4b;
+  color:#FDD835;
 }
 
 .sound-color h3{
@@ -795,7 +797,7 @@ The view project.
  height:75px;
  width:75px;
  margin-left:-10px;
- padding:17px;
+ padding:12px;
  margin-top:15px;
  font-size:2.7em;
 
@@ -803,49 +805,49 @@ The view project.
 
 .project-view-desc h3{
   font-family: 'Raleway', serif;
-  margin-top:20px;
+  margin-top:2px;
   margin-right:0;
-  margin-left:10px;
-  font-size:16px;
-  color:#212121;
+  margin-left:5px;
+  font-size:14px;
+  color:rgba(0,0,0,0.8);
 }
 
 .project-view-desc h1{
   font-family: 'Open Sans', sans-serif;
   margin-top:20px;
   margin-right:0;
-  margin-left:10px;
-  font-size:24px;
+  margin-left:5px;
+  font-size:20px;
   color:#212121;
 }
 
 .insight-prev-box{
 
 
-  border: solid #EEEEEE 8px;
-  border-left: solid #EEEEEE   8px;
-  border-right: solid #EEEEEE   8px;
+  border: solid #EEEEEE 5px;
+  border-left: solid #EEEEEE   5px;
+  border-right: solid #EEEEEE   5px;
   background-color:#fafafa;
-  height:140px;
+  height:120px;
 
 }
 
 .insight-prev-box h2{
-  font-family: 'Raleway', serif;
+  font-family: 'Open Sans', sans-serif;
   margin:20px;
-  font-size:20px;
+  font-size:25px;
 }
 .insight-prev-box h3{
-  font-family: 'Raleway', serif;
-  font-size:20px;
-  color:#fafafa;
-  margin-top:20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size:21px;
+  color:rgba(255,255,255,1);
+  margin-top:15px;
 }
 
 .insight-prev-box h4{
   font-family: 'Raleway', serif;
-  font-size:15px;
-  color:#fafafa;
+  font-size:14px;
+  color:rgba(255,255,255,1);
 }
 .insight-prev-creator{
   display:none;
@@ -864,7 +866,7 @@ The view project.
   background-position: 8% 92%;
 
 
-  border: solid #EEEEEE 15px;
+  border: solid #EEEEEE 8px;
   border-left: solid #EEEEEE   8px;
   border-right: solid #EEEEEE   8px;
 
@@ -884,15 +886,45 @@ The view project.
 }
 
 .top-border-image{
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, #FDD835 50%, #fafafa 50%);
+  -webkit-transition: background-position 0.5s;
+  -moz-transition: background-position 0.5s;
+  transition: background-position 0.5s;
+  background-position: 5% 95%;
+
+
   border: solid #EEEEEE   15px;
   border-left: solid #EEEEEE   8px;
   border-right: solid #EEEEEE   8px;
-  -webkit-box-shadow:0 10px #FAFAFA inset,0 -13px #ffeb3b inset, -10px 0 #FAFAFA inset,
-  10px 0 #FAFAFA inset;
-  -moz-box-shadow:0 10px #FAFAFA inset,0 -13px #ffeb3b inset, -10px 0 #FAFAFA inset,
-  10px 0 #FAFAFA inset;
-  box-shadow:0 10px #FAFAFA inset,0 -13px #ffeb3b inset, -10px 0 #FAFAFA inset,
-  10px 0 #FAFAFA inset;
+  height:300px;
+  overflow:hidden;
+}
+
+.top-border-image:hover {
+  background-position: 100% 0%;
+}
+
+.top-border-image:hover .insight-prev-creator{
+  display:block;
+}
+
+.top-border-image:hover .insight-prev-text{
+  display:none;
+}
+
+.top-border-image:hover img{
+  opacity:0.03;
+}
+
+
+.top-border-image img{
+  position:absolute;
+  top:4.2%;
+  left:0;
+  width:110%;
+  overflow:hidden;
+  transition: all 0.4s;
 }
 
 .top-border-sound{
