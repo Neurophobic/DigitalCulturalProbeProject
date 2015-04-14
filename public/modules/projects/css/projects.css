@@ -119,6 +119,7 @@
   font-family: 'Raleway', sans-serif;
   font-size:15px;
   margin-top: 2px;
+  margin-bottom:4px;
 }
 
 .card h3 {
@@ -188,6 +189,11 @@
 .featured-color-green {
 
   background-color:#4caf50;
+}
+
+.featured-color-grey {
+
+  background-color:#c5c5c5;
 }
 .featured-color-blue {
 
@@ -283,6 +289,10 @@
 .background-green {
 
   background-color:#4caf50;
+}
+.background-grey {
+
+  background-color:#c5c5c5;
 }
 
 .background-blue {
@@ -428,7 +438,7 @@ input[type="text"].create-text-field, textarea {
 }
 
 .create-project-card {
-  margin-top: 55px;
+  margin-top: 0;
 }
 
 .create-project-card h1 {
@@ -792,7 +802,7 @@ The view project.
 .insight-num-circle{
   font-family: 'Raleway', sans-serif;
   color:#FAFAFA;
-  background:#2196f3 ;
+
   border-radius:100%;
  height:75px;
  width:75px;
@@ -938,4 +948,46 @@ The view project.
   10px 0 #FAFAFA inset;
   box-shadow:0 10px #FAFAFA inset,0 -13px #f44336 inset, -10px 0 #FAFAFA inset,
   10px 0 #FAFAFA inset;
+}
+
+.project-information h2{
+  font-family:'Open Sans', sans-serif;
+  font-size:18px;
+  color:#212121;
+}
+.project-information h3{
+  margin-top:2px;
+  margin-left:5px;
+  font-family:'Open Sans', sans-serif;
+  font-size:14px;
+  color:rgba(0, 0, 0, 0.8);
+}
+
+.latest-insights p{
+  font-family:'Open Sans', sans-serif;
+  font-size:12px;
+  margin-left:10px !important;
+  margin-right:10px;
+  margin-bottom:2px;
+  color:rgba(0, 0, 0, 0.5);
+  border-bottom:1px rgba(0, 0, 0, 0.1) solid;
+}
+.task-list-title p{
+  font-family:'Open Sans', sans-serif;
+  font-size:12px;
+  margin-left:35px !important;
+  margin-right:35px;
+  margin-bottom:2px;
+  color:rgba(0, 0, 0, 0.5);
+  border-bottom:1px rgba(0, 0, 0, 0.1) solid;
+}
+.insight-list-title p{
+  font-family:'Open Sans', sans-serif;
+  font-size:12px;
+  margin-left:25px ;
+  margin-right:15px;
+  margin-bottom:-5px;
+  margin-top:-5px;
+  color:rgba(0, 0, 0, 0.5);
+  border-bottom:1px rgba(0, 0, 0, 0.1) solid;
 }

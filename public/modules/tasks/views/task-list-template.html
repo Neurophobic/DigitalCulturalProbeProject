@@ -4,7 +4,9 @@
 <!--<div class="row task-desc">
 <h1>Tasks</h1>
 </div>-->
-
+<div class="row task-list-title">
+  <p>TASKS</p>
+</div>
 <a data-ng-href="#!/tasks/{{task._id}}" data-ng-repeat="task in tasksCtrl.tasks | filter:{ project: $root.passedProjectId }" >
   <div class="col-md-6  task-box {{task.type}}-border">
 
@@ -251,7 +253,11 @@
 
 
 </a>
-<button type="button" ng-click="tasksCtrl.modalCreate('lg')">CREATE A NEW TASK</button>
+<div class="col-md-6 text-center add-task-card">
+  <i class="ion ion-plus add-task-icon" ng-click="tasksCtrl.modalCreate('lg')"> </i>
+  <h2>Create a new task</h2>
+
+</div>
 
 <!--
 <div ng-if="task.type == 'image'"class="col-xs-2">

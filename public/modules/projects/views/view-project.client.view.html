@@ -22,23 +22,32 @@
 
 
 			<div class="col-md-7">
+
 				<task-list>
 				</task-list>
 			</div>
 			<div class="col-md-5 ">
 				<div class="row ">
 					<div class="col-md-2 text-center">
-						<h2 class="insight-num-circle ">{{project.numberinsights}}</h2>
+						<h2 class="insight-num-circle background-{{project.color}}">{{project.numberinsights}}</h2>
 					</div>
 
 					<div class="project-view-desc col-md-9">
 						<h1>{{project.name}} </h1>
 						<h3>{{project.desc}} </h3>
-						<h1 class="results"></h1>
+						<h3 data-ng-bind="project.created | date:'short'"> </h3>
+
 					</div>
 				</div>
+				<div class="row project-information">
+					<div class="col-md-5 col-md-offset-2">
 
-				<div class="row">
+						<h3 class="results"></h3>
+					</div>
+				</div>
+			</br>
+				<div class="row latest-insights">
+					<p>LATEST INSIGHTS</p>
 					<section  data-ng-controller="InsightsController" data-ng-init="find()" >
 
 						<div data-ng-repeat="insight in insights | filter:{ projectid: project._id } |limitTo:5 | orderBy:'-created'" >
@@ -75,7 +84,6 @@
 			<div class="row task-options">
 				<div class="col-md-4">
 
-					<button type="button" ng-click="tasksCtrl.modalCreate('lg')">CREATE A NEW TASK</button>
 
 
 				</div>

@@ -29,12 +29,21 @@ body {
 	line-height: 1.5;
 	margin-bottom:16px;
 	margin-left:20px;
+	text-shadow: none !important;
+}
+.nac-links a:hover{
+	background:green !important;
 }
 .nav-icon{
 	font-size:2em;
 	color: rgba(255,255,255,0.8) ;
 }
 
+.nav > li > a:hover, .nav > li > a:focus {
+	text-decoration: none;
+
+	background-color: rgba(255,255,255,0.1);
+}
 
 .big-buttons{
 	margin-top:150px;
@@ -348,10 +357,10 @@ body {
 }
 
 .sign-in h1{
-	color: black;
+	color: rgba(0,0,0,0.5);
 	font-family: 'Open Sans', sans-serif;
-	font-size:5em;
+	font-size:8em;
 	font-weight:300;
-	margin-bottom:10px;
+	margin-bottom:5px;
 
 }

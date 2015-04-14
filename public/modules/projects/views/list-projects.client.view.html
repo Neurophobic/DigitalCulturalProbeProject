@@ -34,6 +34,7 @@
     </div>
   </div> -->
 
+
   <a  data-ng-href="#!/projects/{{project._id}}" class="list-group-item card-content">
 
 
@@ -104,22 +105,57 @@
 </a>
 </div>
 
-<div class="col-xs-6 col-sm-4 create-button-card">
-  <a href="/#!/projects/create">
-    <div class="row text-center">
-      <i class="glyphicon glyphicon-plus"> </i>
-      <h1> Create a new project </h1>
+
+
+
+
+
+
+
+
+
+
+<div class="col-xs-6 col-sm-4 card">
+
+<a  data-ng-href="/#!/projects/create" class="list-group-item card-content">
+
+
+
+  <div class="row project-prev-name-desc">
+    <div class="col-xs-3 profile-circle-card background-grey">
+      <h2><i class="ion ion-plus"> </i></h2>
+    </div>
+    <div class="col-xs-8">
+      <div class="row"><h1>New project</h1></div>
+      <div class="row"><h2> Create a project here </h2></div>
+
 
     </div>
+  </div>
+
+  <div class="row  featured-insight-text-row" >
+    <div class="col-xs-12 featured-insight-text-col featured-color-grey" style="overflow:hidden;">
+      <div ng-if="project.featuredinsighttype == 'text'">
+        <p ng-if="project.featuredtextinsight.length > 40">{{project.featuredtextinsight}}</p>
+
+        <h1 ng-if="project.featuredtextinsight.length < 20 ">{{project.featuredtextinsight}}</h1>
+
+        <p ng-if="project.featuredtextinsight == 'This is a text insight'">Waiting for insights...<p>
+        </div>
+        <div ng-if="project.featuredinsighttype == 'image'">
+
+          <img ng-src="http://localhost:3001/upload/{{project.featuredimageinsight}}" class="img-responsive"  />
+        </div>
+      </div>
+    </div>
   </a>
+
 </div>
-</div>
-
-
-
 
 
 
 
 </div>
+
+<p ng-show="!projects.length">The projects are the base of insighted. Create one, fill it with tasks for your participants and then send them the url.</p>
 </section>

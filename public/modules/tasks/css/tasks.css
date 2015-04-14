@@ -444,7 +444,11 @@ hey
 /*  margin-top:-90px !important;*/
 
 }
+.background-image{
+  background-color:#fdd835;
+  /*  margin-top:-90px !important;*/
 
+}
 
 /* IN CASE STUFF GOES TO HELL
 .sound-border{
@@ -494,6 +498,29 @@ hey
 }
 
 /* PREVIEW INSIGHT IN TASK VIEW */
+
+
+.insight-border-image{
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, #fdd835 50%, #fafafa 50%);
+  -webkit-transition: background-position 0.5s;
+  -moz-transition: background-position 0.5s;
+  transition: background-position 0.5s;
+  background-position: 3% 97%;
+
+
+  border: solid #EEEEEE 8px;
+  border-left: solid #EEEEEE   8px;
+  border-right: solid #EEEEEE   8px;
+  min-height:170px;
+
+
+}
+
+.insight-border-image img{
+  width:100%;
+}
+
 .insight-border-text{
   background-size: 100% 200%;
   background-image: linear-gradient(to bottom, #4caf50 50%, #fafafa 50%);
@@ -618,4 +645,74 @@ hey
   margin-top:10px;
   margin-bottom:20px;
   margin-left:45px;
+}
+.add-task-icon{
+  background:rgba(0,0,0,0.2);
+  color:rgba(0,0,0,0.4);
+  width:110px;
+  height:110px;
+  border-radius:100%;
+  font-size:4.3em;
+  padding:24px;
+
+  margin-top:25px !important;
+  margin-bottom:10px;
+}
+.add-task-card{
+  background:rgba(255,255,255,0.4);
+  height:250px;
+  border:solid #EEE 15px;
+  border-left:solid #EEE 20px;
+  border-right: solid #EEE 20px;
+
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom,rgba(255,255,255,0.35), rgba(255,255,255,0.35) 50%,rgba(0,0,0,0.2), rgba(0,0,0,0.2) 50%);
+  -webkit-transition: background-position 0.5s;
+  -moz-transition: background-position 0.5s;
+  transition: background-position 0.5s;
+  background-position: 95% 5%;
+
+  cursor: pointer;
+}
+.add-task-card h2{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: 500;
+  color: #212121;
+  opacity: 1;
+  transition: all 0.1s;
+}
+
+
+.task-box-icon{
+  width:110px;
+  height:110px;
+
+
+  margin-bottom:10px;
+  color:rgba(0,0,0,0.4);
+  padding:25px;
+  font-size:4.1em;
+  border-radius:100%;
+  transition: all;
+  transition-delay: 3s;
+}
+
+.task-box-icon h2{
+  position:absolute;
+  color: #fafafa;
+  padding-top:4px;
+  font-size:0.3em;
+
+
+  width:30px;
+  height:30px;
+  border-radius:100%;
+  top:-15px;
+  margin-left:57px;
+
+  transition: all 0.5s;
 }

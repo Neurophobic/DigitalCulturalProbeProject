@@ -5,6 +5,11 @@
 
 
 </br>
+<div class="row insight-list-title">
+	<div class="col-md-7">
+		<p>INSIGHTS</p>
+	</div>
+</div>
 
 <!--		<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == task.user._id))">
 <a class="btn btn-primary" href="/#!/tasks/{{task._id}}/edit">
@@ -96,18 +101,12 @@
 
 
 
-		<div data-ng-repeat="insight in insights | filter:{ taskid: $root.passedTaskId }" class="task-viewer-insight col-md-10 col-md-offset-1 card-content">
+		<div data-ng-repeat="insight in insights | filter:{ taskid: $root.passedTaskId }" class="task-viewer-insight col-md-12 card-content insight-border-{{task.type}}">
 
 			<div class="row">
-				<img ng-src="http://localhost:3001/upload/{{insight._id}}" class="img-responsive img-rounded" />
+				<img ng-src="http://localhost:3001/upload/{{insight._id}}" class="" />
 			</div>
-			<div class="row">
 
-				<h3>-{{insight.user.displayName}}</h3>
-				<h2 data-ng-bind="insight.created | date:'medium'"></h2>
-
-
-			</div>
 
 
 
@@ -121,12 +120,25 @@
 
 <div class="col-md-5">
 	<div class="row ">
-		<div class="col-md-2 text-center">
-			<h2 class="insight-num-circle ">{{task.numberinsights}}</h2>
+		<div class="col-md-3 text-center">
+
+
+
+			<i ng-if="task.type == 'image'" class="ion ion-camera task-box-icon image-icon">
+				<h2 ng-if="task.numberinsights != 0" style="background:#98811f">{{task.numberinsights}}</h2>
+			</i>
+			<i ng-if="task.type == 'sound'" class="ion ion-mic-a task-box-icon sound-icon">
+				<h2 ng-if="task.numberinsights != 0" style="background:#922820">{{task.numberinsights}}</h2>
+			</i>
+			<i ng-if="task.type == 'text'" class="ion ion-chatbubble-working task-box-icon text-icon">
+				<h2 ng-if="task.numberinsights != 0" style="background:#2d6930">{{task.numberinsights}}</h2>
+			</i>
+
 		</div>
-		<div class="project-view-desc col-md-10">
+		<div class="project-view-desc col-md-9">
 			<h1>{{task.name}} </h1>
 			<h3>{{task.purpose}} </h3>
+			<h3 data-ng-bind="task.created | date:'short'"> </h3>
 		</div>
 	</div>
 </div>
