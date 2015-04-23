@@ -952,18 +952,19 @@ The view project.
 
 .project-information h2{
   font-family:'Open Sans', sans-serif;
-  font-size:18px;
-  color:#212121;
+  font-size:1em;
+  color:rgba(0, 0, 0, 0.5);
+  margin-left:5px;
 }
 .project-information h3{
   margin-top:2px;
   margin-left:5px;
   font-family:'Open Sans', sans-serif;
-  font-size:14px;
+  font-size:1.6em;
   color:rgba(0, 0, 0, 0.8);
 }
 
-.latest-insights p{
+.latest-insights h5{
   font-family:'Open Sans', sans-serif;
   font-size:12px;
   margin-left:10px !important;
@@ -990,4 +991,11 @@ The view project.
   margin-top:-5px;
   color:rgba(0, 0, 0, 0.5);
   border-bottom:1px rgba(0, 0, 0, 0.1) solid;
+}
+
+.instructions{
+  padding-top:20px;
+  font-family:'Open Sans', sans-serif;
+  font-size:1.5em;
+  color:rgba(0,0,0, 0.7) ;
 }

@@ -2,7 +2,7 @@
 
 // Insights controller
 angular.module('insights').controller('InsightsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Insights','$rootScope',
-	function($scope, $stateParams, $location, Authentication, Insights, $rootScope) {
+	function($scope, $stateParams, $location, Authentication, Insights, $rootScope, fgDelegate) {
 		$scope.authentication = Authentication;
 
 		// Create new Insight
@@ -65,6 +65,6 @@ angular.module('insights').controller('InsightsController', ['$scope', '$statePa
 			});
 		};
 
-	
+
 	}
 ]);

@@ -119,5 +119,13 @@ input[type="email"].signin-form:focus {
 	padding-right:55px;
 
 	margin-top:15px;
+	text-transform: uppercase;
 
+}
+
+.sign-in label{
+	font-family:'Raleway', serif;
+	color:rgba(0,0,0,0.5);
+	margin-bottom:20px;
+	text-transform: uppercase;
 }

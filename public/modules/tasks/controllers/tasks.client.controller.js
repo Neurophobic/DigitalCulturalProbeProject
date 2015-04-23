@@ -140,6 +140,7 @@ tasksApp.controller('TasksCreateController', ['$scope', '$stateParams', 'Authent
 				purpose: this.purpose,
 				type: this.type,
 				project: $scope.passedProjectId
+
 			});
 
 			// Redirect after save

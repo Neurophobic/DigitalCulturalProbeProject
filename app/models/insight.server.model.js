@@ -31,6 +31,32 @@ var InsightSchema = new Schema({
 	_creator: {
 		type: Schema.ObjectId,
 		ref: 'Task'
+	},
+	taskid: {
+		type: Schema.ObjectId,
+		ref: 'Taskid'
+	},
+	image: {
+		type: String,
+		default:''
+	},
+	projectid: {
+		type: Schema.ObjectId,
+		ref:'Projectid'
+	},
+	type: {
+		type: String,
+		default:'text',
+		trim: true
+	},
+	city: {
+		type: String,
+		default:'Nowhere',
+		trim:true
+	},
+	fulltask: {
+		type: Schema.ObjectId,
+		ref: 'Fulltask'
 	}
 
 });

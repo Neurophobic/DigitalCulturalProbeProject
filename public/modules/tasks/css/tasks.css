@@ -716,3 +716,108 @@ hey
 
   transition: all 0.5s;
 }
+
+
+.deckgrid[deckgrid]::before {
+  /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+  content: '4 .column.column-1-4';
+  font-size: 0; /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+  visibility: hidden;
+}
+
+.deckgrid .column {
+  float: left;
+}
+
+.deckgrid .column-1-4 {
+  width: 25%;
+}
+
+
+.insight-container{
+  background:#fafafa;
+  border:10px solid #eeeeee;
+
+
+}
+.insight-container h3{
+  color:rgba(0,0,0,0.7);
+  margin:0;
+  font-family:'Open Sans', sans-serif;
+  font-size:1.15em;
+  padding-left:15px;
+  padding-top:15px;
+}
+.insight-container h4{
+  color:rgba(0,0,0,0.5);
+  margin:0;
+  font-family:'Raleway', sans-serif;
+  font-size:1em;
+  padding-left:15px;
+  padding-top:5px;
+}
+.insight-container p{
+  color:rgba(0,0,0,0.8);
+  margin:0;
+  font-family:'Open Sans', sans-serif;
+  font-size:1.5em;
+  margin-left:20px;
+  margin-right:20px;
+  padding-top:15px;
+}
+.insight-container h6{
+  color:rgba(0,0,0,0.5);
+  margin:0;
+  font-family:'Open Sans', sans-serif;
+  font-size:1em;
+  padding-right:15px;
+  padding-top:20px;
+  padding-bottom:15px;
+  text-align:right;
+}
+
+.insight-container img{
+  color:rgba(0,0,0,0.5);
+  margin:0;
+  font-family:'Open Sans', sans-serif;
+  font-size:1em;
+  padding-right:15px;
+  padding-left:15px;
+  padding-top:20px;
+  padding-bottom:15px;
+  text-align:right;
+}
+.task-stats{
+  margin-top:15px;
+
+}
+.task-stats p{
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  font-size:1.5em;
+  font-family:'Open Sans', sans-serif;
+  color:rgba(0,0,0,0.4);
+  font-weight:600;
+}
+.task-stats i{
+  color:rgba(0,0,0,0.4);
+  font-size:1.1em;
+  margin-right:5px;
+}
+.task-stats a{
+  cursor: pointer;
+  font-family:'Raleway'  , sans-serif;
+  font-size:1.15em;
+  color:#2196f3;
+}
+.animate-enter, .animate-leave {
+  transition: 500ms ease-in all;
+  position: relative;
+  display: block;
+}
+.animate-enter.animate-enter-active, .animate-leave {
+  left: 0;
+}
+.animate-leave.animate-leave-active, .animate-enter {
+  left: 500px;
+}

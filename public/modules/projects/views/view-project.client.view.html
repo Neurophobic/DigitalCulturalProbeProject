@@ -40,37 +40,69 @@
 					</div>
 				</div>
 				<div class="row project-information">
-					<div class="col-md-5 col-md-offset-2">
-
+					<div class="col-md-12 ">
+						<h2>Send this link to your participants:</h2>
 						<h3 class="results"></h3>
 					</div>
 				</div>
 			</br>
 				<div class="row latest-insights">
-					<p>LATEST INSIGHTS</p>
+					<h5>LATEST INSIGHTS</h5>
 					<section  data-ng-controller="InsightsController" data-ng-init="find()" >
 
-						<div data-ng-repeat="insight in insights | filter:{ projectid: project._id } |limitTo:5 | orderBy:'-created'" >
+						<div data-ng-repeat="insight in insights | filter:{ projectid: project._id } |limitTo:5| orderBy:'-created'" >
 
 
-							<div ng-if="insight.type == 'text'"class="col-md-6  insight-prev-box top-border-{{insight.type}}">
+							<div ng-if="insight.type == 'text'" >
 
-								<h2  class="insight-prev-text text-center" data-ng-bind="insight.text |limitTo:24"></h2>
-								<h3 class="insight-prev-creator">{{insight.user.displayName}}</h3>
-								<h4 class="insight-prev-creator" data-ng-bind="insight.created | date:'medium'"></h4>
+
+
+									<div class="col-md-12 insight-container">
+										<div class="row">
+											<h3>{{insight.user.displayName}}</h3>
+
+										</div>
+										<div class="row">
+
+											<h4>@{{insight.city}}</h4>
+										</div>
+										<div class="row text-center">
+											<p>"{{insight.text}}"</p>
+										</div>
+										<div class="row">
+											<h6 data-ng-bind="insight.created | date:'short'"></h6>
+										</div>
+									</div>
+
 
 
 							</div>
 
 
-							<div ng-if="insight.type == 'image'"class="col-md-12  insight-prev-box top-border-{{insight.type}}">
+							<div ng-if="insight.type == 'image'">
 
-								<img ng-src="http://localhost:3001/upload/{{insight._id}}" class="" />
-								<h3 class="insight-prev-creator">{{insight.user.displayName}}</h3>
-								<h4 class="insight-prev-creator" data-ng-bind="insight.created | date:'medium'"></h4>
+
+									<div class="col-md-12 insight-container">
+										<div class="row">
+											<h3>{{insight.user.displayName}}</h3>
+
+										</div>
+										<div class="row">
+
+											<h4>@{{insight.city}}</h4>
+										</div>
+										<div class="row text-center">
+											<img ng-src="http://localhost:3001/upload/{{insight._id}}" class=" img-responsive" />
+										</div>
+										<div class="row">
+											<h6 data-ng-bind="insight.created | date:'short'"></h6>
+										</div>
+									</div>
+								</div>
 
 
 							</div>
+
 
 
 
