@@ -1,7 +1,7 @@
 <section data-ng-controller="TasksCreateController as taskCtrl">
 
   <div class="modal-header">
-    <h3 class="modal-title"> New Task </h1>
+    <h3 class="modal-title"> Create Task </h1>
     </div>
 
     <div class="modal-body">
@@ -14,7 +14,7 @@
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <div class="controls">
-                  <input type="text" data-ng-model="taskCtrl.name" id="name" class="form-control" placeholder="Task name" required>
+                  <input type="text" data-ng-model="taskCtrl.name" id="name" class="form-control create-text-field" placeholder="Task name" required>
                 </div>
               </div>
             </div>
@@ -22,32 +22,32 @@
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <div class="controls">
-                  <input type="text" data-ng-model="taskCtrl.purpose" id="purpose" class="form-control" placeholder="Task purpose" required>
+                  <input type="text" data-ng-model="taskCtrl.purpose" id="purpose" class="form-control create-text-field" placeholder="Task purpose" required>
                 </div>
               </div>
             </div>
 
             <div class="row">
-              <div class="col-md-10 col-md-offset-1">
-                <div class="row controls type-controls">
+              <div class="col-md-10 col-md-offset-1 t">
+                <div class="row controls type-controllers ">
 
-                  <h1> Pick a task type </h1>
+                  <h2> Pick a task type </h2>
 
-                  <div class="radio col-md-4">
+                  <div class="radio col-md-4 text-center">
 
                     <input type="radio" id="text" name="typePicker" value="text" data-ng-model="taskCtrl.type" class="text"/>
-                    <label for="text"><i class="glyphicon glyphicon-pencil create-type-icon "></i></label>
+                    <label for="text"><i class="ion ion-chatbubble-working create-type-icon "></i></label>
 
                   </div>
 
-                  <div class="radio col-md-4">
+                  <div class="radio col-md-4 text-center">
                     <input type="radio" id="image" name="typePicker" value="image" data-ng-model="taskCtrl.type" class="image"/>
-                    <label for="image"><i class="glyphicon glyphicon-camera create-type-icon "></i></label>
+                    <label for="image"><i class="ion ion-camera create-type-icon "></i></label>
                   </div>
 
-                  <div class="radio col-md-4">
+                  <div class="radio col-md-4 text-center">
                     <input type="radio" id="sound" name="typePicker" value="sound" data-ng-model="taskCtrl.type" class="sound"/>
-                    <label for="sound"><i class="glyphicon glyphicon-headphones create-type-icon "></i></label>
+                    <label for="sound"><i class="ion ion-mic-a create-type-icon "></i></label>
                   </div>
 
 
@@ -66,7 +66,8 @@
     </div>
 
     <div class="modal-footer">
-      <button class="btn btn-success btn-lg" ng-click="taskCtrl.create(); ok()">Save & close</button>
-      <button class="btn btn-warning btn-lg" ng-click="cancel()">Cancel</button>
+      <button class="btn submit-task-button" ng-click="taskCtrl.create(); ok()">CREATE</button>
+      <button class="btn cancel-task-button" ng-click="cancel()">CANCEL</button>
     </div>
   </section>
+  

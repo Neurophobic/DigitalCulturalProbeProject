@@ -10,6 +10,7 @@
 
 .modal-body input[type="text"]{
   height:65px;
+/*  height:65px;
   font-size:35px;
   background:white;
   margin-bottom:50px;
@@ -21,17 +22,17 @@
   border-radius:0px;
 
   -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075); */
 }
 
 .type-controls h2{
-  font-size:35px;
+  font-size:2.9em;
   font-family: 'Raleway', serif;
   font-weight:500;
   color:#212121;
   margin-top:25px;
   margin-bottom:5px;
-  margin-left: 15px;
+  margin-left: 20px;
 
 
 }
@@ -96,14 +97,76 @@ margin-top:0px;
   border-radius:130px;
 }
 
+/*modal */
 
+.type-controllers h2{
+  font-size:2.9em;
+  font-family: 'Raleway', serif;
+  font-weight:500;
+  color:#212121;
+  margin-top:25px;
+  margin-bottom:5px;
+  margin-left: 20px;
+
+
+}
+.type-controllers input[type="radio"]{
+
+  margin-top:0px;
+  display:none;
+
+
+  /*background-image :    -moz-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :     -ms-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :      -o-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image : -webkit-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :         linear-gradient(rgb(240,240,240),rgb(224,224,224));*/
+
+}
+
+.type-controllers input[type="radio"] + label {
+  margin-top:25px;
+  display:block;
+  width:100%;
+  height:100%;
+
+
+
+
+  cursor:pointer;
+}
+.type-controllers .radio{
+  margin-top:0px;
+}
+
+
+
+.type-controllers input[type="radio"].text:checked + label {
+  background:none;
+  border-radius:100%;
+  color:#4caf50;
+}
+.type-controllers input[type="radio"].image:checked + label {
+  background:none;
+  border-radius:100%;
+  color:#fdd835;
+}
+.type-controllers input[type="radio"].sound:checked + label {
+  background:none;
+  border-radius:100%;
+  color:#f44336;
+}
 .create-type-icon{
   text-align:center;
   vertical-align:center;
 
-  margin-left:10%;
+
   margin-top:20px;
-  font-size:90px;
+  font-size:6em;
+}
+.modal-footer {
+  border:none;
+  margin-top:-20px;
 }
 
 /*
@@ -820,4 +883,17 @@ hey
 }
 .animate-leave.animate-leave-active, .animate-enter {
   left: 500px;
+}
+
+.modal-content{
+-webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+ box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+ border-radius:0;
+ border:none;
+}
+.modal-header{
+  border:0;
+}
+.modal-header h3{
+  font-family:'Open Sans', sans-serif;
 }
