@@ -25,14 +25,14 @@ module.exports = {
 			'public/lib/angular-touch/angular-touch.js',
 			'public/lib/angular-sanitize/angular-sanitize.js',
 			'public/lib/angular-ui-router/release/angular-ui-router.js',
-			'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=onGoogleReady',
 			'public/lib/angular-ui-map/ui-map.js',
 			'public/lib/angular-ui-utils/ui-utils.js',
 			'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
 			'public/lib/ngFlowGrid/ngFlowGrid.js',
 			'public/lib/angular-deckgrid/angular-deckgrid.js',
 			'public/lib/angular-mosaic/angular-mosaic.js',
-			'public/lib/angular-filter/dist/angular-filter.js'
+			'public/lib/angular-filter/dist/angular-filter.js',
+			'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=onGoogleReady'
 			]
 		},
 		css: [
