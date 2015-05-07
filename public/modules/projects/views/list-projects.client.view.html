@@ -58,9 +58,12 @@
 
 
 
+    <div ng-if="project.featuredinsighttype == 'text'">
 
-        <div ng-if="project.featuredinsighttype == 'text'">
-          {{project.featuredtextinsight}}
+
+
+
+
           <div ng-if="project.featuredtextinsight != 'This is a text insight'">
         <p ng-if="project.featuredtextinsight.length > 30">{{project.featuredtextinsight}}</p>
 
@@ -73,6 +76,8 @@
 
           <img ng-src="http://178.62.118.59:3001/upload/{{project.featuredimageinsight}}" class="img-responsive"  />
         </div>
+
+
       </div>
     </div>
     <!-- Working img thing
