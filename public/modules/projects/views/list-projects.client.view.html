@@ -60,6 +60,7 @@
 
 
         <div ng-if="project.featuredinsighttype == 'text'">
+          {{project.featuredtextinsight}}
           <div ng-if="project.featuredtextinsight != 'This is a text insight'">
         <p ng-if="project.featuredtextinsight.length > 30">{{project.featuredtextinsight}}</p>
 
