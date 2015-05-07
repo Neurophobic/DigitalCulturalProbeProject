@@ -32,7 +32,7 @@ module.exports = {
 			'public/lib/angular-deckgrid/angular-deckgrid.js',
 			'public/lib/angular-mosaic/angular-mosaic.js',
 			'public/lib/angular-filter/dist/angular-filter.js',
-			'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=onGoogleReady'
+			'https://maps.googleapis.com/maps/api/js?v=3.exp'
 			]
 		},
 		css: [
