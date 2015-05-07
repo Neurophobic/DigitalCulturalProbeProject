@@ -54,9 +54,9 @@
     <div class="row  featured-insight-text-row" >
       <div class="col-xs-12 featured-insight-text-col featured-color-{{project.color}}" style="overflow:hidden;">
         <div ng-if="project.featuredinsighttype == 'text'">
-        <p ng-if="project.featuredtextinsight.length > 40">{{project.featuredtextinsight}}</p>
+        <p ng-if="project.featuredtextinsight.length > 30">{{project.featuredtextinsight}}</p>
 
-        <h1 ng-if="project.featuredtextinsight.length < 20 ">{{project.featuredtextinsight}}</h1>
+        <h1 ng-if="project.featuredtextinsight.length < 30 ">{{project.featuredtextinsight}}</h1>
 
         <p ng-if="project.featuredtextinsight == 'This is a text insight'">Waiting for insights...<p>
       </div>
