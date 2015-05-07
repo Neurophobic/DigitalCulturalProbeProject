@@ -31,8 +31,7 @@ module.exports = {
 			'public/lib/ngFlowGrid/ngFlowGrid.js',
 			'public/lib/angular-deckgrid/angular-deckgrid.js',
 			'public/lib/angular-mosaic/angular-mosaic.js',
-			'public/lib/angular-filter/dist/angular-filter.js',
-			'https://maps.googleapis.com/maps/api/js?'
+			'public/lib/angular-filter/dist/angular-filter.js'
 			]
 		},
 		css: [
